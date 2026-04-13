@@ -107,6 +107,15 @@ main h2 {
     padding-left: 10px;
 }
 
+.precio {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 .galeria-y2k,
 .galeria-rock,
 .galeria-ofertas {

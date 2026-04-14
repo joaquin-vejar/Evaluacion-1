@@ -116,6 +116,14 @@ main h2 {
     margin-bottom: 10px;
 }
 
+.tallas {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
 .galeria-y2k,
 .galeria-rock,
 .galeria-ofertas {
@@ -128,6 +136,7 @@ main h2 {
 .galeria-rock img,
 .galeria-ofertas img {
     border-radius: 6px;
+    border: 3px solid #333;
     object-fit: cover;
     transition: transform 0.3s;
 }
@@ -175,4 +184,9 @@ footer a:hover {
     .galeria-ofertas {
         justify-content: center;
     }
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

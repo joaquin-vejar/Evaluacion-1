@@ -6,23 +6,76 @@
 }
 
 .nav {
-    list-style-type: none;
     background-color: black;
     overflow: auto;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 52px;
 }
 
+/* ── LOGO ── */
+.nav-logo {
+    flex-shrink: 0;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9d342, #ff6b6b);
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
+    position: relative;
+}
+
+.logo-icon::before {
+    content: "J";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* ── NAV LINKS CENTRADOS ── */
 .nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 4px;
 }
 
 .nav li {
-    float: left;
+    float: none;
 }
 
 .link {
@@ -42,7 +95,7 @@
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 52px;
 }
 
 header {
@@ -165,10 +218,23 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (max-width: 600px) {
-    .nav li {
-        float: none;
-        display: block;
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 16px;
+        gap: 6px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     body {
@@ -184,9 +250,4 @@ footer a:hover {
     .galeria-ofertas {
         justify-content: center;
     }
-}
-.producto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
